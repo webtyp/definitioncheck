@@ -1,0 +1,6 @@
+{
+  "languages": ["es", "zh", "hi", "ar", "pt", "fr", "de", "ru"],
+  "keys": {
+    "a module definition needs a Name": ["a module definition needs a Name (es)", "a module definition needs a Name (zh)", "a module definition needs a Name (hi)", "a module definition needs a Name (ar)", "a module definition needs a Name (pt)", "a module definition needs a Name (fr)", "a module definition needs a Name (de)", "a module definition needs a Name (ru)"]
+  }
+}
