@@ -2,8 +2,10 @@
 PLAN: "feat: definitioncheck — judge a model.Definition's Rules/MFA and a model.ModuleDefinition (the one judge for definitionc and crud)"
 EXECUTOR: antigravity
 REVIEWER: none
-STATUS: running
+STATUS: review
 SESSION: 11011781043384931358
+PR: https://github.com/webtyp/definitioncheck/pull/1
+REVIEWED_COMMIT: 906c82bedf0b5391f6c426b2f8dddbb001307620
 ---
 
 > Read AGENTS.md at the repo root before any change.
