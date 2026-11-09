@@ -21,11 +21,11 @@ func CheckModule(m model.ModuleDefinition) error {
 	}
 	for i, entity := range m.Entities {
 		if entity.Name == "" {
-			return fmt.Err(errEntityNoName + m.Name)
+			return fmt.Err(errEntityNoName, m.Name)
 		}
 		for _, previous := range m.Entities[:i] {
 			if previous.Name == entity.Name {
-				return fmt.Err(errEntityTwice + entity.Name)
+				return fmt.Err(errEntityTwice, entity.Name)
 			}
 		}
 		if err := CheckRules(entity); err != nil {

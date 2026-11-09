@@ -30,16 +30,16 @@ func CheckRules(def model.Definition) error {
 		}
 	}
 	if undeclared != 0 {
-		return fmt.Err(errRuleUndeclared + def.Name + " (" + undeclared.String() + ")")
+		return fmt.Err(errRuleUndeclared, def.Name+" ("+undeclared.String()+")")
 	}
 	if orphan != 0 {
-		return fmt.Err(errRuleNotAllowed + def.Name + " (" + orphan.String() + ")")
+		return fmt.Err(errRuleNotAllowed, def.Name+" ("+orphan.String()+")")
 	}
 	if extra := def.MFA &^ def.Allow; extra != 0 {
-		return fmt.Err(errMFANotAllowed + def.Name + " (" + extra.String() + ")")
+		return fmt.Err(errMFANotAllowed, def.Name+" ("+extra.String()+")")
 	}
 	if def.Wire && def.Allow != 0 && (def.Allow != model.Read || def.Rules.Read != model.AddMyBusinessRule) {
-		return fmt.Err(errWireRead + def.Name)
+		return fmt.Err(errWireRead, def.Name)
 	}
 	return nil
 }
