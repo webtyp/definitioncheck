@@ -13,6 +13,7 @@ In webtyp, the [`model`](https://github.com/webtyp/model) library defines data s
 |---|---|
 | Generators and runtime engines write divergent rule validation. | One shared judge enforces identical rules at compile time and runtime. |
 | An allowed action can easily miss a business rule declaration silently. | `CheckRules` refuses any allowed action lacking an explicit rule mode. |
+| Two updates of the same row could both win. | `CheckRules` also refuses a `Revision` field that is not an integer, a second one, or the primary key, so the revision check of `crud` always has exactly one counter to compare. |
 | Duplicate entity names or malformed wire models slip into production. | `CheckModule` catches naming collisions and wire model misconfigurations. |
 
 ## Before You Start

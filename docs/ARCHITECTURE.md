@@ -47,3 +47,4 @@ By concentrating validation in one isomorphic library, rule invariants (such as 
 - **No MFA Without Permissions**: MFA cannot be declared for actions the entity does not allow. This prevents misleading security claims in generated documentation or audits.
 - **Wire Model Isolation**: Wire models represent external integrations or computed views without an underlying database table. They can only expose `Read` guarded by a custom business rule (`AddMyBusinessRule`).
 - **Zero Allocations & TinyGo Safety**: The checker uses fixed arrays and bitwise operations instead of Go maps or reflection, ensuring zero runtime heap overhead and full compatibility with TinyGo WebAssembly.
+- **One Revision, an integer, never the key**: `model.FieldDB.Revision` marks the column that counts a row's updates. At most one per entity, on an `Int` field, and it cannot be the primary key; otherwise `crud`'s conditional update has nothing unambiguous to compare.
