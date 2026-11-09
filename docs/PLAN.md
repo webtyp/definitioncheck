@@ -2,6 +2,8 @@
 PLAN: "feat: definitioncheck — judge a model.Definition's Rules/MFA and a model.ModuleDefinition (the one judge for definitionc and crud)"
 EXECUTOR: antigravity
 REVIEWER: none
+STATUS: running
+SESSION: 11011781043384931358
 ---
 
 > Read AGENTS.md at the repo root before any change.
